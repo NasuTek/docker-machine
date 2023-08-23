@@ -125,7 +125,7 @@ have one, and/or [file an issue](https://github.com/docker/machine/issues).
 
 In order to `create` or `upgrade` virtual machines running Docker, Docker
 Machine will check the Github API for the latest release of the [boot2docker
-operating system](https://github.com/boot2docker/boot2docker).  The Github API
+operating system](https://github.com/NasuTek/boot2docker).  The Github API
 allows for a small number of unauthenticated requests from a given client, but
 if you share an IP address with many other users (e.g. in an office), you may
 get rate limited by their API, and Docker Machine will error out with messages

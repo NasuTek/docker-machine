@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	defaultURL            = "https://api.github.com/repos/boot2docker/boot2docker/releases"
+	defaultURL            = "https://api.github.com/repos/NasuTek/boot2docker/releases"
 	defaultISOFilename    = "boot2docker.iso"
 	defaultVolumeIDOffset = int64(0x8028)
 	versionPrefix         = "-v"
@@ -121,7 +121,7 @@ func (*b2dReleaseGetter) getReleaseTag(apiURL string) (string, error) {
 	defer rsp.Body.Close()
 
 	// If we call the API endpoint
-	// "/repos/boot2docker/boot2docker/releases" without specifying
+	// "/repos/NasuTek/boot2docker/releases" without specifying
 	// "/latest", we will receive a list of releases instead of a single
 	// one, and we should decode accordingly.
 	if version.RC() {
@@ -483,7 +483,7 @@ func (b *B2dUtils) isLatest() bool {
 }
 
 // MakeDiskImage makes a boot2docker VM disk image.
-// See https://github.com/boot2docker/boot2docker/blob/master/rootfs/rootfs/etc/rc.d/automount
+// See https://github.com/NasuTek/boot2docker/blob/dev/files/init.d/autoformat
 func MakeDiskImage(publicSSHKeyPath string) (*bytes.Buffer, error) {
 	magicString := "boot2docker, please format-me"
 
